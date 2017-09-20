@@ -5,7 +5,7 @@ const _ = require('lodash')
 
 console.log('Starting proces...')
 
-const LAST_30_DAYS_LINK = 'http://server.diegoluiz.com:8080/rest/api/2/search?filter=10003&startAt='
+const LAST_30_DAYS_LINK = 'http://server.diegoluiz.com:8080/rest/api/2/search?filter=-1'
 
 api.get(LAST_30_DAYS_LINK)
   .then(r => {
