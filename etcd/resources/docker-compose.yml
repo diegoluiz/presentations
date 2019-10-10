@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    image: node
+    ports:
+    - "5000:5000"
+    volumes:
+    - .:/code
+    links:
+    - etcd
+    entrypoint: node /code/app.js
+  etcd:
+    image: elcolio/etcd
+    ports:
+    - "2379:2379"
+    - "2380:2380"
+    - "4001:4001"
+    - "7001:7001"
+    
